@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Регистрация</title>
+  <title>Регистрация и Вход</title>
   <style>
     /* Стили для формы */
     .form-container {
@@ -42,6 +42,19 @@
       <input type="password" id="password" name="password" required>
 
       <button type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+
+  <div class="form-container">
+    <h2>Вход</h2>
+    <form action="login.php" method="post">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Войти</button>
     </form>
   </div>
 </body>
