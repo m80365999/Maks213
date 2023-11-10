@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Регистрация</title>
+  <style>
+    /* Стили для формы */
+    .form-container {
+      max-width: 300px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .form-container button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Регистрация</h2>
+    <form action="register.php" method="post">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+</body>
+</html>
