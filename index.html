@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Регистрация и Вход</title>
+  <title>Сетевой дневник</title>
   <style>
-    /* Стили для формы */
-    .form-container {
-      max-width: 300px;
+    /* Стили для страницы */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .entry-container {
+      max-width: 600px;
       margin: auto;
       padding: 20px;
       border: 1px solid #ccc;
+      background-color: #f9f9f9;
     }
 
-    .form-container input[type=text], .form-container input[type=password] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
+    .entry-container h2 {
+      margin-top: 0;
     }
 
-    .form-container button {
+    .entry-container p {
+      margin-bottom: 20px;
+    }
+
+    .entry-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .entry-container textarea {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .entry-container button {
       background-color: #4CAF50;
       color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
+      padding: 10px 20px;
       border: none;
       cursor: pointer;
-      width: 100%;
     }
   </style>
 </head>
 <body>
-  <div class="form-container">
-    <h2>Регистрация</h2>
-    <form action="register.php" method="post">
-      <label for="username">Имя пользователя:</label>
-      <input type="text" id="username" name="username" required>
+  <h1>Сетевой дневник</h1>
 
-      <label for="password">Пароль:</label>
-      <input type="password" id="password" name="password" required>
+  <div class="entry-container">
+    <h2>Новая запись</h2>
+    <form action="save_entry.php" method="post">
+      <label for="title">Заголовок:</label>
+      <input type="text" id="title" name="title" required>
 
-      <button type="submit">Зарегистрироваться</button>
+      <label for="content">Содержание:</label>
+      <textarea id="content" name="content" required></textarea>
+
+      <button type="submit">Сохранить</button>
     </form>
   </div>
 
-  <div class="form-container">
-    <h2>Вход</h2>
-    <form action="login.php" method="post">
-      <label for="username">Имя пользователя:</label>
-      <input type="text" id="username" name="username" required>
-
-      <label for="password">Пароль:</label>
-      <input type="password" id="password" name="password" required>
-
-      <button type="submit">Войти</button>
-    </form>
+  <div class="entry-container">
+    <h2>Записи</h2>
+    <!-- Здесь будет выводиться список записей из базы данных -->
   </div>
 </body>
 </html>
