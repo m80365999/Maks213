@@ -1,73 +1,79 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Сетевой дневник</title>
-  <style>
-    /* Стили для страницы */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
+<div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up for Free</h1>
+          
+          <form action="/" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+          </div>
 
-    h1 {
-      text-align: center;
-    }
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="button button-block"/>Get Started</button>
+          
+          </form>
 
-    .entry-container {
-      max-width: 600px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
-    }
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="/" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button class="button button-block"/>Log In</button>
+          
+          </form>
 
-    .entry-container h2 {
-      margin-top: 0;
-    }
-
-    .entry-container p {
-      margin-bottom: 20px;
-    }
-
-    .entry-container form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .entry-container textarea {
-      height: 100px;
-      margin-bottom: 10px;
-    }
-
-    .entry-container button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <h1>Сетевой дневник</h1>
-
-  <div class="entry-container">
-    <h2>Новая запись</h2>
-    <form action="save_entry.php" method="post">
-      <label for="title">Заголовок:</label>
-      <input type="text" id="title" name="title" required>
-
-      <label for="content">Содержание:</label>
-      <textarea id="content" name="content" required></textarea>
-
-      <button type="submit">Сохранить</button>
-    </form>
-  </div>
-
-  <div class="entry-container">
-    <h2>Записи</h2>
-    <!-- Здесь будет выводиться список записей из базы данных -->
-  </div>
-</body>
-</html>
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
